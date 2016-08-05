@@ -1,0 +1,25 @@
+<template name="vendorsShow">
+
+
+    <div class="container" style="padding-top: 60px">
+        <div class="row">
+            <div class="col-md-7">
+                <img src="/images/vendors/{{slug}}.jpg" alt=""/>
+            </div>
+            <div class="col-md-5">
+                <h1>{{name}}</h1>
+
+                <p class="lead">{{#markdown}}{{description}}{{/markdown}} </p>
+
+            </div>
+        </div>
+        <hr/>
+    </div>
+    <div class="container marketing">
+        <div class="row">
+            {{#each products}}
+                {{>productTile this}}
+            {{/each}}
+        </div>
+    </div>
+</template>
